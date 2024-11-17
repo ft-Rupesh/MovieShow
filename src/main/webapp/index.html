@@ -1,40 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieShow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
-
 <body>
+      <section class="header">
+       <nav>
+        <a href="#"><img src="image/Logo3.png" class="logo"></a>
+        <div class="nav-links" id="nav-links">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="#">Explore Movie</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+       </nav>
+       <div class="text-box">
+        <a href="" class="hero-btn">Visit Us to More</a>
+       </div>
+      </section>
+     
 
 
-<header>
-    <nav>
-    <a href="#">Movie Show</a>
-    <input type="text" name="search_bar" placeholder="Search for Movies, Events">
-    <ul>     
-    <li> <a href="index.html">Home</a></li>
-    <li> <a href="AboutUs.html">About Us</a></li>
-    <li> <a href="#">Explore Movies</a></li>
-    <li> <a href="#">Sign in</a></li>
-    <li> <a href="#">Sign Up</a></li>
-    </ul>
-    </nav>
-</header>
+      <!--  Movie  -->
+        <section class="all_movie">
+            <h1>Movies</h1>
+           <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit 
+            maxime sapiente aliquid quos nam repellat rerum id provident at, 
+            explicabo similique facilis nisi ut culpa deserunt optio? Ad, quae modi!</p>
 
-<!-- Hero section  -->
-<section></section>
-<!-- Movie section -->
-<section>
-<img src="image/dhadak2.jpeg" alt="Dhadak2 Movie"  class="movie_image"/>
-<img src="image/Avatar4.jpeg" alt="Avatar4 Movie" class="movie_image"/>
-<img src="image/kannappa.jpg" alt="Kannappa Movie" class="movie_image"/>
-<img src="image/de de pyaar de2.jpeg" alt="De De Pyaar De2 Movie" class="movie_image"/>
-<img src="image/Mufasa.webp" alt="Mufasa Movie" class="movie_image"/>
-<img src="image/Jawan.jpg" alt="Jawan Movie" class="movie_image"/>
-</section>
-<!-- Footer -->
-<footer>@2024</footer>
+            <div class="row">
+                    <div class="Avatar4">
+                   <img src="image/Avatar4.jpeg" class="movie_img">
+                   <p>Avatar4</p>
+                </div>
+                 <div class="Mufasa">
+                   <img src="image/Mufasa.webp" class="movie_img">
+                   <p>Mufasa</p> 
+                </div class="de de pyaar de2">  
+                   <div>               
+                   <img src="image/de de pyaar de2.jpeg" class="movie_img">
+                   <p>De de pyaar de2</p>
+                </div>
+                <div class="dhadak2">
+                   <img src="image/dhadak2.jpeg" class="movie_img">
+                   <p>Dhadak2</p>
+                </div class="kannappa">
+                  <div>
+                   <img src="image/kannappa.jpg" class="movie_img">
+                   <p>Kannappa</p>
+                </div>
+                <div class="Jawan">
+                  <img src="image/Jawan.jpg" class="movie_img">
+                  <p>Jawan</p>
+                </div>
+                 <div class="dora">
+                  <img src="image/dora.avif" class="movie_img">
+                  <p>Dora</p>
+                </div>
+                <div class="tiger3">
+                  <img src="image/tiger3.webp" class="movie_img">
+                  <p>Tiger3</p>
+                </div>
+                  <div class="dunki">
+                  <img src="image/dunki.avif" class="movie_img">
+                  <p>Dunki</p>
+                </div>
+                <div class="rava">
+                  <img src="image/rava.jpeg" class="movie_img">
+                  <p>Rava</p>
+                </div>
+                <div class="hitman">
+                  <img src="image/hitman.jpg" class="movie_img">
+                  <p>Hitman</p>
+                </div>
+                <div class="kiskiskopyarkru">
+                  <img src="image/kiskiskopyarkru.jpeg" class="movie_img">
+                  <p>Kis Kis ko pyar kru</p>
+                </div>
+                  
+                
+            </div>
+        </section>
+
+
+        
+
+         <!--Footer -->
+
+         <section class="footer">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                 At, quaerat minima repellendus, nesciunt fuga repudiandae <br>
+                 eius saepe necessitatibus magni ea mollitia minus culpa, <br>
+                 voluptatum non praesentium eos omnis! Consectetur, ut.</p>
+                 <div class="icons"></div>
+                 <a href="#"><i class="fa fa-facebook"></i></a>
+                 <a href="#"><i class="fa fa-twitter"></i></a>
+                 <a href="https://www.instagram.com/movieshow399/"><i class="fa fa-instagram"></i></a>
+                 <a href="#"><i class="fa fa-linkedin"></i></a>
+                 <p>Made With MLR <i class="fa fa-heart-o"></i></p>
+         </section>
+    <!--JS -->
+    <script>
+          var navLinks=document.getElementById("nav-links");
+           function showMenu()
+           {
+            navLinks.style.right="0"
+           }
+           function hideMenu()
+           {
+            navLinks.style.right="-200px"
+           }
+      </script>
 </body>
 </html>

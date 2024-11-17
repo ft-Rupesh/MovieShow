@@ -1,61 +1,364 @@
-@charset "UTF-8";
-
 *
 {
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
+    margin:0;
+    padding:0;
+  
+}
+.header
+{
+    min-height:100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(20, 30, 42, 0.7), rgba(8, 17, 37, 0.7)), url('image/MovieShow.jpg' ) ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+.logo
+{
+	width:100px;
+	border-radius:50%;
+	
 }
 
-body
+nav{
+      display:flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links
 {
-	font-family:Arial, sans-serif;
-	background-color:#B4F8C8;
+    flex: 1;
+    text-align:right
 }
-
-header nav
-{
-	display: flex;
-    justify-content:space-between;
-    align-items: center;
-    background-color: #00ff80;
-    padding: 1rem 2rem;
-    color: white;
-}
-header nav a.logo {
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
-}
-header nav a.logo {
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
-}
-header nav ul {
+.nav-links ul li{
     list-style: none;
-    display: flex;
-}
+    display: inline-block;
+    padding: 8px 15px;
+    position: relative;
 
-header nav ul li {
-    margin: 0 1rem;
 }
-header nav ul li a {
+.nav-links ul li a{
     color: #fff;
     text-decoration: none;
+    font-size:30px;
 }
 
-.movie_image {
-    width: 400px;            /* Set the width of each image */
-    height: auto;            /* Adjust height automatically to maintain aspect ratio */
-    margin: 10px;            /* Add space around each image */
-    border: 2px solid #ccc;  /* Add a border around each image */
-    border-radius: 8px;      /* Make the corners rounded */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
-    transition: transform 0.5s ease; /* Smooth zoom effect on hover */
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #F44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after
+{
+   width: 100%;
 }
 
-.movie_image:hover {
-    transform: scale(1.3); /* Slightly zoom in on hover */
-    border-color: #eb4ef8; /* Change border color on hover */
+.text-box
+{
+  width:90%;
+  color:#fff;
+  position: absolute;
+  top:85%;
+  left:50%;
+  transform: translate(-50%,-50%); 
+  text-align: center;
+}
+
+.hero-btn
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 60px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.hero-btn:hover
+{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition:1s ;
+}
+nav .fa
+{
+    display: none;
+}
+@media (max-width:700px) 
+{
+    .text-box h1
+{
+   font-size: 20px;
+}
+.nav-links ul li
+{
+    display: block;
+} 
+.nav-links
+{
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -201px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+}
+nav .fa
+{
+   display:block;
+   color: #fff;
+   margin: 10px;
+   font-size: 19px;
+   cursor: pointer;
+
+}
+.nav-links ul {
+   padding: 30px;
+};
+}
+
+.movie-col:hover
+{
+   box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4);
+
+}
+@media (max-width:700px) {
+    .row{
+
+        flex-direction: column;
+    }
+    
+}
+
+/* movie  */
+
+/* General Styling for the section */
+.all_movie {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Center text alignment */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.all_movie h1 {
+    font-size: 2.5rem; /* Larger heading font size */
+    color: #222; /* Darker color */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.all_movie p {
+    font-size: 1.1rem;
+    color: #555; /* Gray color for text */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Styling for the row container */
+.all_movie .row {
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center content */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 20px; /* Spacing between movie items */
+}
+
+/* Individual movie containers */
+.all_movie .row div {
+    width: calc(25% - 20px); /* 4 items per row on large screens */
+    min-width: 150px; /* Minimum size for smaller screens */
+    background-color: #fff; /* White background for movie cards */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for movie containers */
+.all_movie .row div:hover {
+    transform: translateY(-10px); /* Lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Movie images with fixed size */
+.all_movie .movie_img {
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Crop image to fill the dimensions */
+    border-bottom: 2px solid #ddd;
+}
+
+/* Movie titles */
+.all_movie .row div p {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .all_movie .row div {
+        width: calc(33.33% - 20px); /* 3 items per row on medium screens */
+    }
+}
+
+@media (max-width: 700px) {
+    .all_movie .row div {
+        width: calc(50% - 20px); /* 2 items per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .all_movie .row div {
+        width: 100%; /* Single column on very small screens */
+    }
+}
+
+/* Animations */
+.all_movie .row div {
+    animation: fadeIn 0.6s ease-in-out; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover animation for images */
+.all_movie .movie_img:hover {
+    transform: scale(1.05); /* Zoom effect */
+    transition: transform 0.3s;
+    filter: brightness(1.1); /* Slight brightness increase */
+}
+
+
+/* Footer  */
+
+/* General Styling for Footer */
+.footer {
+    background-color: #222; /* Dark background for footer */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    border-top: 4px solid #555; /* Subtle border for separation */
+    position: relative;
+}
+
+.footer h4 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #f1c40f; /* Highlighted color for the heading */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.footer p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #bbb; /* Light gray for text */
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Styling for icons container */
+.footer .icons {
+    margin: 20px 0;
+}
+
+/* Individual icons with spacing */
+.footer .icons i {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 15px; /* Horizontal spacing between icons */
+    padding: 10px;
+    border-radius: 50%; /* Circular icons */
+    background-color: #333; /* Icon background */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* Hover Effects for Icons */
+.footer .icons i:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+    background-color: #f1c40f; /* Change background color on hover */
+    color: #222; /* Change icon color on hover */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+/* Styling for "Made with MLR" */
+.footer p:last-of-type {
+    margin-top: 30px;
+    font-size: 1rem;
+    font-style: italic;
+    color: #bbb;
+    animation: fadeIn 1.4s ease-in-out;
+}
+
+.footer p:last-of-type i {
+    color: #e74c3c; /* Red color for heart icon */
+    animation: heartbeat 1.5s infinite; /* Pulsing heart animation */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .footer h4 {
+        font-size: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    .footer .icons i {
+        font-size: 1.2rem;
+        margin: 0 10px; /* Adjust spacing for smaller screens */
+        padding: 8px;
+    }
 }
