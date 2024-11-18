@@ -7,14 +7,15 @@
 <link rel="stylesheet" href="Resigtration.css">
 </head>
 <body>
+    <div id="signUpForm">
 <form action="signin" method="post">
     <div class="signUpDiv">
-        <i class="fa fa-times" aria-hidden="true"></i>
+        <i class="fa fa-times" aria-hidden="true" onclick="closeForm()"></i>
         <table><tr><td ><a class="account" href="SignUp.html" >Sign Up</a></td><td><a class="account" href="SignIn.html" >Sign In</a></td></tr></table>
         <br>
         <div>
-            <label for="viewerUserName">USER_NAME/MOBILE_NO</label>
-            <input type="text" id="viewerUserName" name="viewerUserName" placeholder="USER_NAME/ M.NO" required>
+            <label for="viewerUserName">USER_NAME OR MOBILE_NO</label>
+            <input type="text" id="viewerUserName" name="viewerUserName" placeholder="USER_NAME OR MOBILE NUMBER" required>
         </div>
 
         <label for="viewerPassword">PASSWORD</label>
@@ -23,11 +24,15 @@
         <button id="b1" type="submit">Sign In</button>
     </div>
 </form>
+</div>
 </body>
 <script>
-    function close(){
-     var close1 = document.getElementsByTagName('i');
-     close1=disabled;
-    }
+   
+  function closeForm() {
+      
+      window.location.href = "index.html"; 
+  }
+
+
 </script>
 </html>

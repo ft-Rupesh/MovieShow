@@ -278,7 +278,15 @@ nav .fa
     letter-spacing: 2px;
     animation: fadeIn 1s ease-in-out;
 }
-
+.footer h4:hover
+{
+     
+    display:inline-block;
+     color: green;
+     border: 2px solid red;
+     border-radius: 4px;
+      
+}
 .footer p {
     font-size: 1rem;
     line-height: 1.8;
@@ -292,6 +300,22 @@ nav .fa
     margin: 20px 0;
 }
 
+#facebook
+{
+    color: #316FF6;
+}
+#instagram
+{
+   background:linear-gradient( RGB(254, 218, 117),rgb(250, 126, 30),rgb(214, 41, 118),rgb(150, 47, 191),rgb(79, 91, 213) );
+}
+#twitter
+{
+   color: #1DA1F2
+}
+#linkedin
+{
+    color:#0077B5;
+}
 /* Individual icons with spacing */
 .footer .icons i {
     font-size: 1.5rem;
@@ -306,7 +330,7 @@ nav .fa
 /* Hover Effects for Icons */
 .footer .icons i:hover {
     transform: scale(1.2); /* Slight zoom effect */
-    background-color: #f1c40f; /* Change background color on hover */
+    background-color: #739be0; /* Change background color on hover */
     color: #222; /* Change icon color on hover */
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
@@ -324,6 +348,7 @@ nav .fa
     color: #e74c3c; /* Red color for heart icon */
     animation: heartbeat 1.5s infinite; /* Pulsing heart animation */
 }
+
 
 /* Animations */
 @keyframes fadeIn {
