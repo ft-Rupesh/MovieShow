@@ -1,0 +1,143 @@
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(20, 30, 42, 0.7), rgba(8, 17, 37, 0.7)), url('image/MovieShow.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.account {
+    text-decoration: none;
+    color: rgb(183, 247, 251);
+    cursor: pointer;
+    
+}
+.account:hover{
+ text-decoration: underline; 
+   
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 50px;
+}
+
+.signUpDiv 
+{
+    margin-top: 150px;
+    border-style: groove;
+    border-radius: 10px;
+    
+    border-color: 2px solid white;
+    backdrop-filter: blur(5px);
+    padding: 20px 40px;
+    box-sizing: border-box;
+    width:500px; /* Added this line to control width */
+}
+
+
+/* Existing styles */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, td {
+    /* Adds border to the table and cells */
+    text-align: center;
+    padding: 5px;
+}
+
+td {
+    font-weight: bold;
+    font-size: 30px;
+    color: wheat;
+    margin-bottom: 15px;
+}
+td:hover{
+    transition: 0.5em ease-out;
+    border-top: red; 
+}
+label {
+    display: block;
+    color: rgb(183, 247, 251);;
+    margin-bottom: 5px;
+    font-weight: normal;
+    cursor: pointer;
+}
+input,select
+{
+    background: none;
+    border: none;
+    border-bottom: 2.5px solid white;
+    font-size: 16px;
+    color: white;
+   
+}
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+      
+}
+option{
+    background-color: black;
+    
+}
+.signUpDiv.choose_option
+{
+    font-size: 16px;
+}
+#b1{
+    
+        display: block;
+        width: 50%;
+        border-radius: 10px;
+        background-color: #57D126;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: auto;
+        font-size: 15px;
+        margin-top: 10px;
+        cursor: pointer;
+    
+}
+i {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #57D126;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+i{
+    color: white;
+    background-color: rgb(248, 13, 13);
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 390px;
+    margin-bottom: 15px;
+}
+
+i:hover {
+    background-color: rgb(204, 13, 13);
+}
+
+#b1:hover {
+    background-color: #34960e;
+    font-size: 17px;
+}

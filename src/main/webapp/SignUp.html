@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Form Example</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="Resigtration.css">
+</head>
+<body>
+<div id="signUpForm">
+<form action="signup" method="post">
+    <div class="signUpDiv">
+        <i class="fa fa-times" aria-hidden="true" onclick="closeForm()"></i>
+        <table><tr><td ><a class="account" href="SignUp.html" >Sign Up</a></td><td><a class="account" href="SignIn.html" method="post">Sign In</a></td></tr></table>
+        <br>
+        <div>
+            <label for="viewerUserName">FULL NAME</label>
+            <input type="text" id="viewerName" name="viewerName" placeholder="FULL_NAME" required>
+        </div>
+
+        <label for="viewerPhoneNo">MOBILE NO</label>
+        <input type="number" id="viewerPhoneNo" name="viewerPhoneNo" placeholder="MOBILE_NO" required>
+
+        <label for="viewerEmail">EMAIL</label>
+        <input type="email" id="viewerEmail" name="viewerEmail" placeholder="EMAIL" required><br>
+
+        <label placeholder="SELECT">GENDER</label>
+        <select name="viewerGender" required>
+            <option value="" disabled selected hidden class="choose_option">CHOOSE GENDER</option>
+            <option value="male">MALE</option>
+            <option value="female">FEMALE</option>
+            <option value="other">OTHER</option>
+        </select>
+        
+
+        <label>LANGUAGE</label>
+        <select name="viewerLanguage" required>
+            <option value="" disabled selected hidden class="choose_option">CHOOSE LANGAUGE</option>
+            <option value="english">ENGLISH</option>
+            <option value="hindi">HINDI</option>
+        </select>
+
+        <label>LOCATION</label>
+        <select name="viewerLocation" required>
+            <option value="" disabled selected hidden class="choose_option">CHOOSE LOCATION</option>
+            <option value="hyderabad">HYDERABAD</option>
+            <option value="pune">PUNE</option>
+            <option value="indore">INDORE</option>
+            <option value="prayagraj">PRAYAGRAJ</option>
+            <option value="bhopal">BHOPAL</option>
+        </select>
+        <button id="b1" type="submit">Sign Up</button>
+    </div>
+</form>
+</div>
+<script>
+function closeForm() {
+      
+    window.location.href = "index.html"; 
+}
+</script>
+</body>
+</html>

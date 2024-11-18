@@ -3,34 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Movieshow</title>
+    <title>Movie show</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-image: linear-gradient(rgba(20, 30, 42, 0.7), rgba(8, 17, 37, 0.7)), url('image/MovieShow.jpg');
+            background-position: center;
+            background-size: cover;
+            position: relative;
             color: #333;
         }
         .about-section {
             padding: 50px;
             max-width: 800px;
             margin: auto;
-            background-color: #ffffff;
+            background:transparent;
+            backdrop-filter: blur(3px);
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             text-align: center;
+          
         }
         .about-section h1 {
             font-size: 2.5em;
-            color: #333;
+            color: red;
+            margin-top: 30px;
             margin-bottom: 20px;
         }
         .about-section p {
+            margin-top: 30px;
             font-size: 1.1em;
             line-height: 1.6;
-            color: #555;
+            color: white;
             margin-bottom: 20px;
+        }
+        .home
+        {
+              background-color: green;
+              width: 120px;
+              height: 35px;
+              border-radius: 4px;
+              box-shadow: 2px;
+              margin-top: 10px;
         }
         .highlight {
             color: #e50914;
@@ -44,6 +60,8 @@
         <p>Welcome to <span class="highlight">Movieshow</span> – your ultimate destination for discovering and booking tickets to the latest movies with ease. We believe in making the movie-going experience as seamless and enjoyable as possible. Whether you're into action-packed blockbusters, thought-provoking indie films, or family-friendly animations, Movieshow has something for everyone.</p>
         <p>Our mission is simple: to bring the joy of cinema to your fingertips. With an easy-to-navigate platform, Movieshow allows you to explore movies by genre, read reviews, check showtimes, and secure your tickets—all in just a few clicks. We aim to provide a user-friendly experience across devices, so whether you're at home or on the go, Movieshow is ready to make your movie night memorable.</p>
         <p>Join us and discover what’s playing near you. Book your next movie experience with <span class="highlight">Movieshow</span> today and enjoy cinema like never before!</p>
+        <a href="index.html"><input type="submit" value="HOME" class="home"></a>
     </div>
+    
 </body>
 </html>
