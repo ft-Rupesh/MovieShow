@@ -8,6 +8,7 @@ public class ViewerBean  implements Serializable
     private String viewerName,viewerEmail,viewerGender,viewerLanguage,viewerLocation;
     private Long viewerPhoneNo;
     
+    // parameter less constructor 
     public ViewerBean() {}
 	public String getViewerName() {
 		return viewerName;
