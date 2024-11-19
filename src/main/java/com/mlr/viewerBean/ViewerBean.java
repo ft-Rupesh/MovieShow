@@ -10,7 +10,8 @@ public class ViewerBean  implements Serializable
     
     // parameter  
     public ViewerBean() {}
-	public String getViewerName() {
+	public String getViewerName() 
+	{
 		return viewerName;
 	}
 	public void setViewerName(String viewerName) {
